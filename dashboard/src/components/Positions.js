@@ -4,7 +4,7 @@ import axios from "axios";
 const Positions = () => {
   const[allpositions,setAllpositions]= useState([]);
  useEffect(()=>{
-    axios.get('http://localhost:8080/positions').then((response)=>{
+    axios.get('https://backend-x7uu.onrender.com/positions').then((response)=>{
       setAllpositions(response.data)
     })
   },[])
@@ -40,7 +40,9 @@ const Positions = () => {
             <td className={profClass}>
               {(currValue-stock.avg*stock.qty).toFixed(2)}
             </td>
-            <td class={dayClass}>{stock.day}</td>
+            <td className={dayClass}>
+              {stock.day}
+            </td>
           </tr>
           )})
        

@@ -18,7 +18,7 @@ const SignUpPage = () => {
   const handlesubmit = async(e) => {
     e.preventDefault()
     try{
-        const response=await axios.post('http://localhost:8080/register',
+        const response=await axios.post('https://backend-x7uu.onrender.com//register',
             formData
         )
         setSignIn(true)

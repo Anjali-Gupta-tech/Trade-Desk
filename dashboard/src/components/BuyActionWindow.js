@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import axios from "axios";
 import { useContext } from "react";
 import GeneralContext from "./GeneralContext";
@@ -16,7 +15,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 const handleBuyClick = async () => {
   try {
-    await axios.post('http://localhost:8080/neworders', {
+    await axios.post('https://backend-x7uu.onrender.com/neworders', {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
