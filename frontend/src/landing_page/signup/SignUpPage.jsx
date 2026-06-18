@@ -23,12 +23,12 @@ const SignUpPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/register",
+        "https://backend-x7uu.onrender.com//register",
         formData
       );
       console.log(response.data);
       setSignIn(true);
-        window.location.href = "http://localhost:3000" 
+        window.location.href = "https://tradedesk-dashboard.onrender.com" 
     } catch (err) {
       console.log(err);
     }

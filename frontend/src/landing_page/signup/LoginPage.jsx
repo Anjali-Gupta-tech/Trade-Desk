@@ -23,12 +23,12 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://trade-desk-9c1v.onrender.com/login",
+        "https://backend-x7uu.onrender.com/login",
         formData
       );
       console.log(response.data);
       setLogin(true);
-       window.location.href = "http://localhost:3000" 
+       window.location.href = "https://tradedesk-dashboard.onrender.com" 
     
     } catch (err) {
       console.log(err);
