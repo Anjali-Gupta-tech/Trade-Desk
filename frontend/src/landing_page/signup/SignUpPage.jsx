@@ -23,7 +23,7 @@ const SignUpPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://backend-x7uu.onrender.com//register",
+        "https://backend-x7uu.onrender.com/register",
         formData
       );
       console.log(response.data);
